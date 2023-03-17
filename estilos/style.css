@@ -1,0 +1,135 @@
+@charset "UTF-8";  
+
+:root{
+    --cor1:#58AAAE;
+    --cor2:#AD6A95;
+}
+
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor2);
+    height: 100vh;
+    width: 100vw;
+}
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    background-color: white;
+    width: 275px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.515);
+    transform: translate(-50%,-50%);
+    transition:  width 0.3s, height 0.3s;
+    transition-timing-function: ease;
+}
+section#login p{
+    margin: 25px 0px;
+}
+section#login > div#imagem{
+    display: block;
+    background: #AD6A95 url(../imagens/pexels-lina-kivaka-2773605.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100px;
+    margin: 0px;
+}
+
+section#login div#formulario{
+    display: block;
+    padding: 10px;
+}
+div{
+    margin: 10px 0px;
+}
+div#formulario > h1{
+    text-align: center;
+    font-size: 1.6em;
+}
+div#formulario > p{
+    font-size: 0.8em;
+
+}
+div.campo{
+    display: block;
+    background-color: #71d0d5;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid #71d0d5;
+}
+div.campo span{
+    color: white;
+    font-size: 1.5em;
+    width: 40px;
+    padding: 5px;
+}
+div.campo input{
+    background-color: #e996cc;
+    font-size: 1em;
+    width:calc(100% - 44.5px);
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    padding: 4px;
+    transform: translateY(-1px);
+}
+div.campo input:focus-within{
+    background-color: white;
+}
+
+form label{
+    display: none;
+}
+form > div > input[type="submit"]{
+    display: block;
+    font-weight: bold;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-image: linear-gradient(to left,#e996cc,var(--cor1));
+    color: white;
+    border: 1px solid var(--cor2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+form > div > input[type=submit]:hover{
+    background-image:linear-gradient(to right,#e13aa7,var(--cor1));
+}
+
+form > div > a.botao{
+    display: block;
+    text-align: center; 
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    color:#e996cc;
+    width: 100%;
+    height: 40px;
+    margin: 5px 0px;
+    background:white;
+    border: 1px solid var(--cor1);
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+form > div > a.botao:hover{
+    color: white;
+    background-color: #90c4c7;
+    transition: 0.1s;
+}
